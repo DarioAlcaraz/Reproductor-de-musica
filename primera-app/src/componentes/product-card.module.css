@@ -1,0 +1,85 @@
+.title{
+   color: rgb(4, 2, 141);
+   font-size: 20px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+/*.card {
+  border: 1px solid #5c5b5b;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px;
+  background-color: #918e8e;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 150px;
+}*/
+
+
+
+
+
+
+
+img{
+  width: 150px;
+  height: auto;
+
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+
+.iconButton:hover {
+  transform: scale(1.2);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgb(4, 4, 131);
+  transform: translateY(-4px); /* Eleva la tarjeta ligeramente */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 280px; /* o el alto que prefieras */
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #504f4f;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.footer {
+  margin-top: auto; /* empuja el footer hacia abajo */
+}
+
+
+.title{
+  color:""
+}
+
+.album{
+ color:rgb(243, 244, 245)
+}

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: rgb(13, 13, 14);
+   
+}
+.layout{
+    background-color: "";
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+.left{
+  margin-left: 5px;
+    flex: 4;
+    color: "";
+    background-color: rgb(129, 129, 129);
+    border-radius: 8px;
+}
+
+.favorito {
+  margin-right: 5px;
+  background-color: #cc0606;
+  color: #02083f;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+  
+}
+
+.titulo_favorito{
+    color: #02045c;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.titulo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #f8f6f6;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align:right;
+}
+
+.album {
+  color: #fdf8f8;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}

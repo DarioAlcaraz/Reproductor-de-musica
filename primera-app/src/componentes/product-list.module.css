@@ -1,0 +1,17 @@
+.sectionTitle{
+    
+    color:rgb(245, 239, 239);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;         /* Permite que pasen a la siguiente línea si no entran */
+  gap: 16px;               /* Espacio entre tarjetas */
+  justify-content:left;/* Centra las tarjetas horizontalmente */
+ 
+}
+
+
