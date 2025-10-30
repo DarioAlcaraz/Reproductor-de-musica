@@ -5,13 +5,14 @@ header{
 /* Para centrar el logo + título */
 .brand {
   padding: 10px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+  flex-wrap: wrap;
+  text-align: center;
 }
+
 
 .logo {
   width: 50px;
@@ -100,4 +101,29 @@ header{
 
 .iconLink:hover {
   transform: scale(1.2);
+}
+
+
+
+ 
+@media (max-width: 400px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navLinks {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .userIcon {
+    margin-top: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
 }
