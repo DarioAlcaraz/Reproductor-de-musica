@@ -3,7 +3,7 @@
     padding: 0;
 }
 main{
-    background-color: rgb(13, 13, 14);
+    background-color: rgba(8, 9, 83, 0.87);
    
 }
 .layout{
@@ -16,7 +16,7 @@ main{
   margin-left: 5px;
     flex: 4;
     color: "";
-    background-color: rgb(129, 129, 129);
+    background-color:"";
     border-radius: 8px;
 }
 
@@ -24,17 +24,18 @@ main{
   position: sticky;
   top: 20px; 
   margin-right: 5px;
-  background-color: #cc0606;
-  color: #02083f;
+  margin-top: 27px;
+  background-color:"";
+  color: #111111;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(245, 243, 243, 0.295);
   z-index: 10;
 }
 
 
 .titulo_favorito{
-    color: #02045c;
+    color: #f9f9fc;
     text-align: center;
     padding-bottom: 15px;
 }
@@ -43,14 +44,14 @@ main{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #f8f6f6;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 10px;
   text-align:right;
 }
 
 .album {
   color: #fdf8f8;
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 ul {
@@ -61,3 +62,47 @@ ul {
 li {
   margin-bottom: 0.5rem;
 }
+
+
+.canciones {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.favoritoItem {
+  width: 100%;
+  max-width: 220px;       /* o el ancho que uses en tus tarjetas */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.searchForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.searchButton {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+

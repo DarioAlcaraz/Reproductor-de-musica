@@ -1,10 +1,13 @@
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./componentes/app";
+import App from "./componentes/App.jsx";
 
-  
-
-
-const container = document.querySelector("#root");
+const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
-root.render(<App/>);
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

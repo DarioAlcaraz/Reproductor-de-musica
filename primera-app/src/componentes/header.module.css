@@ -1,8 +1,9 @@
-header{
-  background-color: rgb(8, 8, 8);
+/* Fondo del header */
+header {
+  /*background-color: rgba(8, 9, 83, 0.87);*/
+  background: linear-gradient(rgba(16, 16, 53, 0.966),rgba(11, 12, 116, 0.966));
 }
-
-/* Para centrar el logo + título */
+/* Logo + título centrado */
 .brand {
   padding: 10px;
   display: flex;
@@ -13,28 +14,18 @@ header{
   text-align: center;
 }
 
-
 .logo {
   width: 50px;
   height: 50px;
   object-fit: contain;
   display: block;
   animation: girarLogo 5s linear infinite;
-  /*transition: transform 0.3s ease; funciona con el hover, remplaza la linea de animation*/
 }
-
-/*.logo:hover {
-  animation: girarLogo 1s linear infinite;
-}*/
-
 
 @keyframes girarLogo {
-  0% {transform: rotateY(0);}
-  100% {transform: rotateY(90deg);}
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(90deg); }
 }
-
-
-
 
 .title {
   font-size: 50px;
@@ -44,69 +35,106 @@ header{
   line-height: 1;
 }
 
-
-
-
+/* Navegación principal */
 .nav {
-  
-  margin-left: 5px;
-  margin-right: 5px;
-
+  margin: 0 5px;
+  font-family: 'Lucida Sans', Arial, sans-serif;
   border-radius: 8px;
-  padding-bottom: 10px ;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:linear-gradient(to right, #0f0f0f, #961919);
+  background:  rgba(8, 9, 83, 0.87);
+  flex-wrap: wrap;
+  height: 70px;
 }
 
+
+
+/* Enlaces de navegación */
 .navLinks {
-  
-  
-  padding-top: 50px;
   display: flex;
   gap: 16px;
-
+  padding-top: 20px;
 }
 
 .navlink {
-  margin-left: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #4104e7;
+  color: #eaeaec;
   font-size: 0.9rem;
   gap: 4px;
+  margin-left: 5px;
 }
 
 .navlink:hover {
   color: #ff0000;
 }
 
-
+/* Íconos de usuario */
 .userIcon {
+  margin-top: 30px;
+  margin-right: 10px;
+  color: #f3f2f2;
+  display: flex;
+  gap: 12px;
+}
+
+.user, .setting {
+  color: #faf8f8;
+  
+  
+}
+
+.user:hover, .setting:hover {
+  color: red;
+}
+
+
+/* Buscador con botón */
+.searchBox {
+  
   display: flex;
   align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  flex-shrink: 0;
 }
 
-.iconLink {
-    width: 50px;
-    
-    color: #f3f1f1;
-    text-decoration: none;
-    padding-top: 50px;
-    transition: transform 0.2s ease;
+.searchInput {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  width: 250px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+  background-color: white;
 }
 
-.iconLink:hover {
-  transform: scale(1.2);
+.searchInput:focus {
+  border-color: #ff0000;
 }
 
+.searchButton {
+  padding: 8px 14px;
+  background-color: #f7f4f4;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.searchButton:hover {
+  background-color: #8f8f8f;
+}
 
- 
-@media (max-width: 400px) {
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
   .nav {
     flex-direction: column;
     align-items: center;
@@ -116,14 +144,29 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
-  .userIcon {
+  .searchBox {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .searchInput {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .searchButton {
+    width: 50%;
     margin-top: 10px;
+    font-size: 16px;
   }
 
   .title {
-    font-size: 32px;
+    font-size: 35px;
   }
 }
+
