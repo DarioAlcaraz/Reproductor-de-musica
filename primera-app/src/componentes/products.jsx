@@ -39,8 +39,16 @@ export const products = [
     id: 5,
     title: "TRUENO",
     album: "Dance Crip",
-    category: "Rock Nacional",
+    category: "Trap",
     image: "https://i.pinimg.com/736x/e8/ae/75/e8ae7500e040838355e7acb22d5fe0ee.jpg",
+    mensaje: "",
+  },
+  {
+    id: 6,
+    title: "BIZARRAP",
+    album: "Mix",
+    category: "Trap",
+    image: "https://tse4.mm.bing.net/th/id/OIP.K7kHKBHQ2I4j4UOoI5gmagAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
     mensaje: "",
   },
   
@@ -48,7 +56,7 @@ export const products = [
 
 export const products2 = [
   {
-    id: 6,
+    id: 7,
     title: "RODRIGO",
     album: "Lo mejor del Amor",
     category: "Cuarteto",
@@ -56,7 +64,7 @@ export const products2 = [
     mensaje: "",
   },
   {
-    id: 7,
+    id: 8,
     title: "LEO MATTIOLI",
     album: "Cumbia",
     category: "Latinos",
@@ -64,7 +72,7 @@ export const products2 = [
     mensaje: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "LA NUEVA LUNA",
     album: "Mix",
     category: "Cumbia",
@@ -72,7 +80,7 @@ export const products2 = [
     mensaje: "",
   },
   {
-    id: 9,
+    id: 10,
     title: "LOS CONTINUADOS",
     album: "Enganchados",
     category: "Cumbia",
@@ -80,12 +88,19 @@ export const products2 = [
     mensaje: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "ULISES BUENO",
     album: "Enganchado",
     category: "Cuearteto",
     image: "https://fotos.perfil.com/2021/03/28/900/0/ulises-bueno-hablo-de-sus-17-anos-como-adicto-llegue-a-pesar-66-kilos-1151388.jpg",
     mensaje: "",
   },
-  
+  {
+    id: 12,
+    title: "KPERSONAJES",
+    album: "Enganchado",
+    category: "Cumbia",
+    image: "https://cdn.teleticket.com.pe/especiales/ke-personajes-2023/images/disco-imagen.jpg",
+    mensaje: "",
+  },
 ];
