@@ -1,51 +1,53 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-main{
-    background-color: rgba(8, 9, 83, 0.87);
-   
+
+main {
+  background-color: rgba(8, 9, 83, 0.87);
+  min-height: 100vh;
+  overflow-x: hidden; /* evita scroll lateral en móvil */
 }
-.layout{
-    background-color: "";
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
+
+.layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 10px;
 }
-.left{
+
+.left {
+  flex: 4;
   margin-left: 5px;
-    flex: 4;
-    color: "";
-    background-color:"";
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .favorito {
   position: sticky;
-  top: 20px; 
+  top: 20px;
   margin-right: 5px;
-  margin-top: 27px;
-  background-color:"";
+  margin-top: 52px;
   color: #111111;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(245, 243, 243, 0.295);
   z-index: 10;
+  background-color: #0c0c3d; /* fondo para diferenciar */
 }
 
-
-.titulo_favorito{
-    color: #f9f9fc;
-    text-align: center;
-    padding-bottom: 15px;
+.titulo_favorito {
+  color: #f9f9fc;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 .titulo {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #f8f6f6;
   font-weight: bold;
-  font-size: 10px;
-  text-align:right;
+  font-size: 12px;
+  text-align: right;
 }
 
 .album {
@@ -63,16 +65,9 @@ li {
   margin-bottom: 0.5rem;
 }
 
-
-.canciones {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: #f9f9f9;
-}
-
 .favoritoItem {
   width: 100%;
-  max-width: 220px;       /* o el ancho que uses en tus tarjetas */
+  max-width: 220px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -80,26 +75,25 @@ li {
   margin-bottom: 0.5rem;
 }
 
-.searchForm {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+/* Responsive */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .favorito {
+    position: static; /* que no quede fijo en móvil */
+    width: 100%;
+    margin: 0;
+  }
+
+  .titulo {
+    font-size: 14px;
+    text-align: left;
+  }
 }
 
-.searchInput {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.searchButton {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #222;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 
 
 
