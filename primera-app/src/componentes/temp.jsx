@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./screens/home";
 import Buscar from "./screens/buscar";
-import Header from "../componentes/header";
+import Header from "./header";
 import { FavoritosProvider } from "../context/FavoritosContext";
 
 
