@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchSongs } from "../api";
-import ProductList from "./product-list";
-import ProductCard from "./product-card";
+import { fetchSongs } from "../../api";
+import ProductList from "../productList/product-list";
+import ProductCard from "../productCard/product-card";
 import styles from "./canciones.module.css";
 
-function Canciones({ busqueda = "la barra", favoritos, setFavoritos }) {
-  const [searchBusqueda, setSearchBusqueda] = useState(busqueda);
+function Canciones({ busqueda = "la barra", favoritos, onToggleFavorite }) {
+  const [searchBusqueda] = useState(busqueda);
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["itunes", searchBusqueda],
@@ -14,10 +14,12 @@ function Canciones({ busqueda = "la barra", favoritos, setFavoritos }) {
     enabled: !!searchBusqueda,
   });
 
+  if (isLoading) return null;
+
   return (
     <div className={styles.canciones}>
-      {isLoading && <p>Cargando canciones...</p>}
       {error && <p>Error al buscar canciones: {error.message}</p>}
+
       {data && data.results && data.results.length > 0 ? (
         <ProductList>
           {data.results.map((cancion) => (
@@ -28,22 +30,17 @@ function Canciones({ busqueda = "la barra", favoritos, setFavoritos }) {
               image={cancion.artworkUrl100}
               previewUrl={cancion.previewUrl}
               category={cancion.primaryGenreName}
-              isFavorite={favoritos.includes(cancion.trackId)}
-              onToggleFavorite={() => {
-                if (favoritos.includes(cancion.trackId)) {
-                  setFavoritos(favoritos.filter((id) => id !== cancion.trackId));
-                } else {
-                  setFavoritos([...favoritos, cancion.trackId]);
-                }
-              }}
+              isFavorite={favoritos.some((f) => f.id === cancion.trackId)}
+              onToggleFavorite={() => onToggleFavorite(cancion)}
             />
           ))}
         </ProductList>
       ) : (
-        !isLoading && <p>No se encontraron canciones para "{searchBusqueda}".</p>
+        <p>No se encontraron canciones para "{searchBusqueda}".</p>
       )}
     </div>
   );
 }
 
 export default Canciones;
+

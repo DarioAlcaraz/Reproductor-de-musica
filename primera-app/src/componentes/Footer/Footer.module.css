@@ -1,0 +1,29 @@
+.principal {
+  display: block;
+  background: #45829e; /* mismo estilo que tu header */
+  color: rgb(6, 15, 54);
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: auto; /* empuja al final */
+  
+}
+
+
+h3 {
+  
+  font-size: 20px;
+}
+
+p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+
+
+.copy {
+  margin-top: 10px;
+  font-size: 12px;
+}
+

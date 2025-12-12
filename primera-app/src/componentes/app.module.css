@@ -4,13 +4,32 @@
   box-sizing: border-box;
 }
 
-main {
-  background-color: rgba(8, 9, 83, 0.87);
+#root {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden; /* evita scroll lateral en móvil */
+}
+
+main {
+ 
+ 
+  background: linear-gradient(to right, #6703aa, #025a94, rgb(2, 135, 197));
+  margin-left: 0px;
+   /* evita scroll lateral en móvil */
+  justify-content: center;
+  
+  padding-top: 100px;   /* espacio solo arriba */
+  margin: 0;            /* elimina márgenes que empujan el footer */
+  
+  min-height: calc(114vh - 121px - 60px); /* ocupa toda la pantalla menos header y footer */
+ 
+
+
+  
 }
 
 .layout {
+  
   display: flex;
   gap: 24px;
   align-items: flex-start;
@@ -18,6 +37,7 @@ main {
 }
 
 .left {
+  
   flex: 4;
   margin-left: 5px;
   border-radius: 8px;
@@ -25,14 +45,15 @@ main {
 
 .favorito {
   position: sticky;
-  top: 20px;
+  top: 120px;
+  
+  margin-top: 109px;
   margin-right: 5px;
-  margin-top: 52px;
+  
   color: #111111;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(245, 243, 243, 0.295);
-  z-index: 10;
   background-color: #0c0c3d; /* fondo para diferenciar */
 }
 
@@ -74,9 +95,62 @@ li {
   display: block;
   margin-bottom: 0.5rem;
 }
+.contbtn{
+  display: "flex";
+  justify-content: "flex-start";
+  margin-Bottom: "10px";
+}
+.btnActualizar {
+  background-color: rgb(49, 140, 224);
+ 
+  border:none;
+  color:  #f7f8f7;
+  padding: 8px;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btnActualizar:hover {
+  background-color: #139da1;
+  color:#f8f6f6;
+}
+
+.btnVaciar {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btnVaciar:hover {
+  background-color: #c9302c;
+}
+
+.btnQuitarFavorito {
+  background-color: transparent;
+  border: 1px solid #d9534f;
+  color: #d9534f;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.btnQuitarFavorito:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .layout {
     flex-direction: column;
     gap: 16px;
@@ -92,6 +166,12 @@ li {
     font-size: 14px;
     text-align: left;
   }
+   
+  main{
+  padding-top: 220px;
+}
+
+
 }
 
 

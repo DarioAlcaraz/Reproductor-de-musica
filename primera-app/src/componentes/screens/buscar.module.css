@@ -1,9 +1,8 @@
-.volverButton {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #444;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
+.main{
+  background-color: aqua;
+  
+}
+.titulo_favorito{
+  color: aliceblue;
+  margin-top: 25px;
 }
